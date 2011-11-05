@@ -1,6 +1,8 @@
 #ifndef _SNIPPET_PRIME_CHECKER_HPP
 #define _SNIPPET_PRIME_CHECKER_HPP
 
+#include <vector>
+
 class prime_checker_bounded {
 private:
   typedef std::vector<bool> Cont;
