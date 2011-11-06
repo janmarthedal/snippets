@@ -1,14 +1,16 @@
-#ifndef _SNIPPET_PRIME_CHECKER_HPP
-#define _SNIPPET_PRIME_CHECKER_HPP
+#ifndef _SNIPPET_PRIME_CHECKER_BOUNDED_SIMPLE_HPP
+#define _SNIPPET_PRIME_CHECKER_BOUNDED_SIMPLE_HPP
 
 #include <vector>
 
-class prime_checker_bounded {
+class prime_checker_bounded_simple {
 private:
   typedef std::vector<bool> Cont;
   Cont not_prime;
 public:
-  prime_checker_bounded(const typename Cont::size_type n) : not_prime(n+1) {
+  prime_checker_bounded_simple(const typename Cont::size_type n)
+    : not_prime(n+1)
+  {
     typename Cont::size_type j=1, k;
     not_prime[0] = not_prime[1] = true;
     while (true) {
@@ -29,5 +31,5 @@ public:
   }
 };
 
-#endif // _SNIPPET_PRIME_CHECKER_HPP
+#endif // _SNIPPET_PRIME_CHECKER_BOUNDED_SIMPLE_HPP
 
