@@ -2,6 +2,8 @@
  * File:   snippets/type_traits.hpp
  * Author: Jan Marthedal Rasmussen
  *
+ * Created 2011-11-09 08:05Z
+ *
  * (C) Copyright Jan Marthedal Rasmussen 2009-2011
  * Use, modification and distribution are subject to the
  * Boost Software License, Version 1.0. (See accompanying file
