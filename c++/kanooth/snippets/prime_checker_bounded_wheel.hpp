@@ -1,3 +1,15 @@
+/*
+ * File:   snippets/double_precision_multiplication.hpp
+ * Author: Jan Marthedal Rasmussen
+ *
+ * Created 2011-11-07 10:00Z
+ *
+ * (C) Copyright Jan Marthedal Rasmussen 2009-2011
+ * Use, modification and distribution are subject to the
+ * Boost Software License, Version 1.0. (See accompanying file
+ * LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+ */
+
 #ifndef _SNIPPET_PRIME_CHECKER_BOUNDED_WHEEL_HPP
 #define _SNIPPET_PRIME_CHECKER_BOUNDED_WHEEL_HPP
 
