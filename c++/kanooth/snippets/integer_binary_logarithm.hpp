@@ -1,8 +1,6 @@
 /*
- * File:   snippets/double_precision_multiplication.hpp
  * Author: Jan Marthedal Rasmussen
- *
- * Created 2011-11-09 10:00Z
+ * See   : http://kanooth.com/snippets/integer_binary_logarithm.html
  *
  * (C) Copyright Jan Marthedal Rasmussen 2009-2011
  * Use, modification and distribution are subject to the

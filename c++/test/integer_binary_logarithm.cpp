@@ -1,5 +1,5 @@
 #include <kanooth/snippets/integer_binary_logarithm.hpp>
-#include <assert.h>
+#include <kassert.hpp>
 
 template <typename T>
 unsigned lb(T v) {
@@ -11,7 +11,7 @@ unsigned lb(T v) {
 template <typename T>
 void compare(T v)
 {
-  assert(integer_binary_logarithm(v) == lb(v));
+  kassert(integer_binary_logarithm(v) == lb(v));
 }
 
 int main()
