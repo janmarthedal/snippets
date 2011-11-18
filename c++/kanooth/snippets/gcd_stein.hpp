@@ -10,6 +10,8 @@
 #ifndef _SNIPPETS_GCD_STEIN_HPP
 #define _SNIPPETS_GCD_STEIN_HPP
 
+#include <algorithm>
+
 template <typename NUM>
 inline unsigned shift_to_uneven(NUM& n)
 {
