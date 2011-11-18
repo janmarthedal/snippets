@@ -1,8 +1,6 @@
 /*
- * File:   snippets/template.hpp
  * Author: Jan Marthedal Rasmussen
- *
- * Created 201?-??-?? ??:??Z
+ * See   : 
  *
  * (C) Copyright Jan Marthedal Rasmussen 2009-2011
  * Use, modification and distribution are subject to the
