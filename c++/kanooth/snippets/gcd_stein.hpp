@@ -10,27 +10,31 @@
 #ifndef _SNIPPETS_GCD_STEIN_HPP
 #define _SNIPPETS_GCD_STEIN_HPP
 
-#include <algorithm>
+#include <kanooth/snippets/trailing_binary_zeros.hpp>
+
+template <typename T>
+inline T minimum(T a, T b)
+{
+	return a < b ? a : b;
+}
 
 template <typename NUM>
 inline unsigned shift_to_uneven(NUM& n)
 {
-  unsigned shift = 0;
-  while (!(n & 1)) {
-    n >>= 1;
-    ++shift;
-  }
+  unsigned shift = trailing_binary_zeros(n);
+	n >>= shift;
   return shift;
 }
 
-/* Computes the greatest common divisor of two   *
- * non-negative integers using Stein's algorithm */
+/* Computes the greatest common divisor of two    *
+ * non-negative integers using Stein's algorithm. *
+ * NUM must be an unsigned integer.               */
 template <typename NUM>
 NUM gcd_stein(NUM a, NUM b)
 {
   if (!a) return b;
   if (!b) return a;
-  unsigned shift = std::min(shift_to_uneven(a), shift_to_uneven(b));
+  unsigned shift = minimum(shift_to_uneven(a), shift_to_uneven(b));
   while (a != b) {
     if (a > b) {
       a -= b;

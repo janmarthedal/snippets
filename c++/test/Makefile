@@ -9,7 +9,7 @@ gcd_euclid: gcd_euclid.cpp $(SNIPPETS)/gcd_euclid.hpp $(DEFINC)
 	g++ -O2 -I. -I$(SNIPPETS_ROOT) $< -o $@
 
 gcd_stein: gcd_stein.cpp $(SNIPPETS)/gcd_stein.hpp $(DEFINC)
-	g++ -O2 -I. -I$(SNIPPETS_ROOT) $< -o $@
+	g++ -O2 -I. -I$(SNIPPETS_ROOT) -I../drafts $< -o $@
 
 integer_binary_logarithm: integer_binary_logarithm.cpp $(SNIPPETS)/integer_binary_logarithm.hpp $(DEFINC)
 	g++ -O2 -I. -I$(SNIPPETS_ROOT) $< -o $@

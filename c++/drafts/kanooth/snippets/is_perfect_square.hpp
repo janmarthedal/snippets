@@ -11,7 +11,8 @@
 #ifndef _SNIPPETS_IS_PERFECT_SQUARE_HPP
 #define _SNIPPETS_IS_PERFECT_SQUARE_HPP
 
-#include <integer_square_root.hpp>
+#include <kanooth/snippets/trailing_binary_zeros.hpp>
+#include <kanooth/snippets/integer_square_root.hpp>
 
 template <typename NUM>
 NUM sqr(const NUM n)
@@ -20,8 +21,11 @@ NUM sqr(const NUM n)
 }
 
 template <typename NUM>
-bool is_perfect_square(const NUM n)
+bool is_perfect_square(NUM n)
 {
+	unsigned ntz = trailing_binary_zeros(n);
+	if (ntz % 2) return false;
+	n >>= ntz;
   return sqr(integer_square_root(n)) == n;
 }
 
