@@ -11,20 +11,22 @@
 #ifndef _SNIPPETS_FIBONACCI_NUMBER_HPP
 #define _SNIPPETS_FIBONACCI_NUMBER_HPP
 
-template <typename T>
-void set_pair(T& x, T& y, T a, T b) { x = a; y = b; }
-
 template <typename R>
 struct fibonacci_number_evaluator {
   R operator()(unsigned n) const
   {
     if (n <= 1) return n;
-    R a=1, b=0, p=0, q=1;
-    while (n > 1) {
-      if (n & 1)
-        set_pair(a, b, b*q + a*q + a*p, b*p + a*q);
-      set_pair(p, q, p*p + q*q, (2*p + q)*q);
-      n >>= 1;
+    R a=1, b=0, p=0, q=1, tmp;
+    while (n != 1) {
+      if (n % 2 != 0) {
+          tmp = b*q + a*q + a*p;
+          b   = b*p + a*q;
+          a   = tmp;
+      }
+      tmp = p*p + q*q;
+      q   = (2*p + q)*q;
+      p   = tmp;
+      n /= 2;
     }
     return b*p + a*q;
   }
