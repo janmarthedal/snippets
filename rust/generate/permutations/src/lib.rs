@@ -52,14 +52,10 @@ impl<T: Clone + Ord> Iterator for Permutations<T> {
     }
 }
 
-pub fn sub_permutations<T: Clone + Ord>(s: &[T], subsize: usize) -> Permutations<T> {
+pub fn permutations<T: Clone + Ord>(s: &[T], subsize: usize) -> Permutations<T> {
     Permutations {
         vec: s.to_vec(),
         subsize,
         first: true,
     }
-}
-
-pub fn permutations<T: Clone + Ord>(s: &[T]) -> Permutations<T> {
-    sub_permutations(s, s.len())
 }
